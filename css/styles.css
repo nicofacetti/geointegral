@@ -73,44 +73,65 @@ footer div p{
 }
 
 .mainindex{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display:grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(9, 170px);
 }
 
-.intro {
-    border-bottom: 2px solid #03A055;
+
+.mainindex section div{
+    width: 90%;
+    height: 100%;
 }
 
-.secciones section {
-    padding-top: 45px;
-    border-bottom: 2px solid #03A055;
+.mainindex section div img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-.bottomsection {
-    padding-top: 45px;
-    border-bottom: 2px solid #03A055;
-    margin-bottom: 30px;
+.intro div img{
+    object-fit: none;   
 }
 
-section h2 {
-    color: #03A055; font-size: 24px;
-    font-weight: bold;
+.intro{
+    grid-column: 3/11;
+    grid-row: 1/2;
+    align-self: first baseline;
 }
 
+.sec1 {
+    grid-column: 3/11;
+    grid-row: 2/4;
+    align-self: first baseline;
+}
+.sec2 {
+    grid-column: 3/11;
+    grid-row: 4/6;
+    align-self: first baseline;
+}
+.sec3 {
+    grid-column: 3/11;
+    grid-row: 6/8;
+    align-self: first baseline;
+}
+.sec4 {
+    grid-column: 3/11;
+    grid-row: 8/10;
+    align-self: first baseline;
+}
+ 
 section p {
+    width: 90%;
     font-size: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    text-align: center;
+    border-bottom: 2px solid #03A055;
 }
 
 .mainservicios{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin: 100px 0;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(3, 200px);
 }
 
 .card{
@@ -122,6 +143,34 @@ section p {
     border: 2px solid #03A055;
     border-radius: 16px;
     box-shadow: 5px 5px 5px  gray;
+}
+
+#card-1{
+    grid-column: 1/3;
+    grid-row: 1/4;
+    justify-self: center;
+    align-self: center;
+}
+
+#card-2{
+    grid-column: 3/5;
+    grid-row: 1/4;
+    justify-self: center;
+    align-self: center;
+}
+
+#card-3{
+    grid-column: 5/7;
+    grid-row: 1/4;
+    justify-self: center;
+    align-self: center;
+}
+
+#card-4{
+    grid-column: 7/9;
+    grid-row: 1/4;
+    justify-self: center;
+    align-self: center;
 }
 
 #subt1{
@@ -217,6 +266,11 @@ section p {
     font-size: 20px;
 }
 
+h2 {
+    color: #03A055; font-size: 24px;
+    font-weight: bold;
+}
+
 button {
     padding: 10px;
     background-color: #03a05470;
@@ -232,7 +286,7 @@ button {
     row-gap: 20px;
     column-gap: 20px;
     justify-content: center;
-    margin-top: 10px;
+    margin: 20px 0;
 }
 
 .cardcontainer article{
@@ -277,13 +331,21 @@ button {
     margin-top: 15px;
 }
 
+.grid-form{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(12,50px);
+}
 
 form{
+    grid-column: 3/7;
+    grid-row: 2/12;
+    justify-content: center;
     display: flex;
     flex-direction: column;
     flex-shrink: unset;
     width: 500px;
-    margin: 0 200px 200px 700px
+
 }
 
 form label{
